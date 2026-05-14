@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechRevive Repair Lab</title>
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #05070b;
+      color: #f5f7fb;
+      line-height: 1.6;
+    }
+    header {
+      min-height: 92vh;
+      background:
+        radial-gradient(circle at center, rgba(0, 170, 255, .18), transparent 35%),
+        linear-gradient(135deg, #020305, #090d14 55%, #000);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid #00aaff;
+    }
+    .logo-img {
+      width: min(420px, 90%);
+      border-radius: 22px;
+      box-shadow: 0 0 35px rgba(0, 170, 255, .35);
+      margin-bottom: 25px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 52px;
+      letter-spacing: 1px;
+    }
+    .blue { color: #00aaff; }
+    header p {
+      font-size: 21px;
+      margin: 8px 0;
+      color: #dce9f5;
+    }
+    nav {
+      background: rgba(0, 0, 0, .94);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #00aaff;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 16px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    nav a:hover {
+      background: #00aaff;
+      color: #000;
+    }
+    section {
+      max-width: 1120px;
+      margin: auto;
+      padding: 55px 22px;
+    }
+    h2 {
+      color: white;
+      font-size: 34px;
+      border-bottom: 4px solid #00aaff;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-top: 0;
+    }
+    .hero, .card, form {
+      background: linear-gradient(145deg, #0d111a, #05070b);
+      border: 1px solid rgba(0, 170, 255, .35);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 0 22px rgba(0, 170, 255, .13);
+    }
+    .hero { text-align: center; }
+    .btn {
+      display: inline-block;
+      background: #00aaff;
+      color: #000;
+      padding: 13px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+      box-shadow: 0 0 14px rgba(0, 170, 255, .4);
+    }
+    .btn:hover {
+      background: white;
+      color: #000;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+    .card h3 {
+      color: #00aaff;
+      margin-top: 0;
+    }
+    .card p, li {
+      color: #d5d9e2;
+    }
+    .promo {
+      background: linear-gradient(135deg, #005a91, #00aaff);
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      margin: 25px 0;
+      box-shadow: 0 0 25px rgba(0, 170, 255, .32);
+    }
+    .gallery img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(0, 170, 255, .45);
+      box-shadow: 0 0 18px rgba(0, 170, 255, .18);
+      filter: saturate(1.05) contrast(1.08);
+    }
+    label { font-weight: bold; color: #00aaff; }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 16px;
+      background: #030508;
+      color: white;
+      border: 1px solid #00aaff;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+    button {
+      background: #00aaff;
+      color: black;
+      padding: 13px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #00aaff;
+    }
+    .small-title {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #c7d2df;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header id="home">
+  <img src="techrevive_logo.png" alt="TechRevive Repair Lab logo" class="logo-img">
+  <h1>Tech<span class="blue">Revive</span></h1>
+  <div class="small-title">Repair Lab</div>
+  <p>Riverside, California</p>
+  <p><strong>Revive Your Tech. Restore Your Connection.</strong></p>
+  <p>Smartphone, tablet, computer, and gaming console repairs done fast and professionally.</p>
+  <div>
+    <a class="btn" href="#services">View Services</a>
+    <a class="btn" href="#contact">Book a Repair</a>
+  </div>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Products or Services</a>
+  <a href="#reviews">Customer Reviews</a>
+  <a href="#account">Customer Account</a>
+  <a href="#gallery">Picture Gallery</a>
+  <a href="#employment">Employment</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section>
+  <div class="hero">
+    <h2>Welcome to TechRevive Repair Lab</h2>
+    <p>At TechRevive Repair Lab, we bring damaged devices back to life. Our technicians repair smartphones, tablets, laptops, desktop computers, and gaming consoles using reliable tools, quality parts, and honest service.</p>
+    <p>Whether your device has a cracked screen, battery issue, water damage, charging problem, or software error, we provide fast diagnostics and professional repair solutions.</p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="grid">
+    <div class="card"><h3>Company History</h3><p>TechRevive Repair Lab was founded in 2021 to provide affordable and trustworthy electronics repair services for students, families, professionals, and local businesses in Riverside.</p></div>
+    <div class="card"><h3>Ownership</h3><p>The business operates as a partnership owned by two experienced electronics repair specialists who wanted to create a modern, customer-focused repair shop.</p></div>
+    <div class="card"><h3>Services Offered</h3><p>We repair phones, tablets, laptops, desktop computers, gaming consoles, screens, batteries, charging ports, cameras, and software systems.</p></div>
+    <div class="card"><h3>Competition</h3><p>We compete with major repair chains by offering faster service, lower pricing, personalized support, and direct communication with repair technicians.</p></div>
+    <div class="card"><h3>Community Involvement</h3><p>TechRevive supports electronic recycling and helps local students learn basic technology care, maintenance, and repair awareness.</p></div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Products or Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Smartphone Repair</h3><p>We repair cracked screens, broken cameras, charging ports, water damage, battery issues, speaker problems, and software malfunctions for iPhone and Android devices.</p></div>
+    <div class="card"><h3>Computer Repair</h3><p>Our technicians diagnose and repair laptops and desktops with hardware failure, slow performance, viruses, screen damage, storage issues, and operating system problems.</p></div>
+    <div class="card"><h3>Gaming Console Repair</h3><p>We repair PlayStation, Xbox, and Nintendo systems experiencing overheating, HDMI failures, fan issues, disk errors, controller problems, and software issues.</p></div>
+  </div>
+  <div class="promo">
+    <h3>Free Diagnostic Check</h3>
+    <p>Bring in your device today and receive a free repair estimate before March 31.</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="grid">
+    <div class="card"><h3>Sarah M.</h3><p>“My phone screen was repaired in less than an hour and looked brand new. The shop looked professional and the workers were friendly.”</p></div>
+    <div class="card"><h3>Daniel R.</h3><p>“My gaming PC stopped working before a tournament, and TechRevive fixed it the same day. They explained everything clearly.”</p></div>
+    <div class="card"><h3>Emily T.</h3><p>“I spilled water on my laptop and thought my files were gone. TechRevive recovered my files and repaired the laptop faster than expected.”</p></div>
+  </div>
+</section>
+
+<section id="account">
+  <h2>Customer Account</h2>
+  <div class="promo">
+    <h3>Spring Tech Special</h3>
+    <p>15% OFF all smartphone screen repairs until March 31!</p>
+  </div>
+  <form>
+    <h3>Create Account / Login</h3>
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your full name">
+    <label>Email Address</label>
+    <input type="email" placeholder="Enter your email">
+    <label>Phone Number</label>
+    <input type="tel" placeholder="Enter your phone number">
+    <label>Password</label>
+    <input type="password" placeholder="Create or enter password">
+    <label>Device Type</label>
+    <select>
+      <option>Smartphone</option>
+      <option>Tablet</option>
+      <option>Laptop</option>
+      <option>Desktop Computer</option>
+      <option>Gaming Console</option>
+    </select>
+    <button type="button">Submit</button>
+  </form>
+</section>
+
+<section id="gallery">
+  <h2>Picture Gallery</h2>
+  <p>Here are examples of our repair services, shop environment, employees, tools, and customer experience.</p>
+  <div class="grid gallery">
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Tech workstation">
+    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80" alt="Computer repair">
+    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Repair tools">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Circuit board">
+    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?auto=format&fit=crop&w=800&q=80" alt="Tech shop">
+    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80" alt="Computer monitor">
+    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80" alt="Phone technology">
+    <img src="https://images.unsplash.com/photo-1555617117-08e1a80f6aa9?auto=format&fit=crop&w=800&q=80" alt="Device repair">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Laptop workstation">
+    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Gaming setup">
+  </div>
+</section>
+
+<section id="employment">
+  <h2>Employment</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Electronics Repair Technician</h3>
+      <p><strong>Responsibilities:</strong> Diagnose device issues, replace damaged parts, test repairs, organize workstations, and assist customers with repair questions.</p>
+      <p><strong>Requirements:</strong> High school diploma, repair experience, problem-solving skills, and professional communication.</p>
+      <p><strong>Salary/Benefits:</strong> $22/hour, paid training, employee discounts, flexible scheduling.</p>
+    </div>
+    <div class="card">
+      <h3>Customer Service Representative</h3>
+      <p><strong>Responsibilities:</strong> Greet customers, schedule repairs, answer calls, process payments, and explain pricing.</p>
+      <p><strong>Requirements:</strong> Customer service experience, basic computer skills, organization, and friendly attitude.</p>
+      <p><strong>Salary/Benefits:</strong> $18/hour, flexible schedule, discounts, advancement opportunities.</p>
+    </div>
+    <div class="card">
+      <h3>Store Manager</h3>
+      <p><strong>Responsibilities:</strong> Supervise employees, manage inventory, oversee operations, handle customer concerns, and track sales.</p>
+      <p><strong>Requirements:</strong> Management experience, leadership skills, electronics knowledge, and strong communication.</p>
+      <p><strong>Salary/Benefits:</strong> $55,000/year, health insurance, bonuses, paid vacation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><strong>Business Name:</strong> TechRevive Repair Lab</p>
+    <p><strong>Address:</strong> 1234 Market Street, Riverside, CA 92501</p>
+    <p><strong>Phone:</strong> (951) 555-0199</p>
+    <p><strong>Email:</strong> support@techreviverepair.com</p>
+    <p><strong>Website:</strong> www.techreviverepair.com</p>
+    <p><strong>Social Media:</strong> Instagram | Facebook | TikTok | X/Twitter</p>
+    <p><strong>Hours:</strong> Monday–Friday 9 AM–7 PM, Saturday 10 AM–5 PM, Sunday Closed</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 TechRevive Repair Lab | Revive Your Tech. Restore Your Connection.</p>
+</footer>
+
+</body>
+</html>
